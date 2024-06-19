@@ -22,14 +22,18 @@ h5,
 h6 {
   margin: 0;
 }
+html {
+  font-size: 10px;
+}
 
 body {
   /* font-family: 'Red Hat Display', sans-serif; */
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
   font-style: normal;
   background-color: #fff;
   color: #000;
+  font-size: 1.8rem;
 }
 
 ul {
@@ -39,21 +43,25 @@ ul {
 li {
   list-style-type: none;
 }
-body a {
-  font-family: "Poppins", sans-serif;
+ a {
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
   color: #081158;
 }
 
+
+
 p {
-  font-size: 16px;
+  font-size: 18px;
   padding: 0;
   margin: 0;
 }
 h1 {
-  font-size: 80px;
   font-weight: 700;
   font-size: 44px;
+  max-width: 500px;
+  margin-top: 97px;
+  margin-bottom: 30px;
 }
 h2 {
   /* font-family: 'Roboto', sans-serif; */
@@ -94,61 +102,61 @@ h4 {
   width: 164px;
 }
 /*--------------------------- header ---------------------------*/
-.header{
+.header {
   padding: 24px 0 26px;
-
+  font-size: 1.6rem;
 }
-.container{
+.header .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-.header .logo{
+.header .logo {
   display: flex;
 }
-.header .logo img{
+.header .logo img {
   height: 32px;
   width: 32px;
   margin-right: 12px;
 }
-.nav{
+.nav {
   display: flex;
   justify-content: space-between;
   /* width: 604px; */
 }
-.list{
+.list {
   display: flex;
   justify-content: space-between;
   max-width: 350px;
   margin-right: 50px;
 }
-.list__item:last-child{
+.list__item:last-child {
   margin-right: 0;
 }
-.list__item{
+.list__item {
   margin-right: 25px;
 }
 
-.button{
-  margin-left: 50px;
-}
-
-.buttons a{
+.buttons a,
+.hero a {
   padding: 11px 25px;
   border-radius: 4px;
-  border: 1px solid #BCD0E5;
+  border: 1px solid #bcd0e5;
+  font-size: 1.6rem;
 }
-.buttons a:last-child{
-  background-color: #FF9900;
+.buttons a:last-child,
+.hero a {
+  background-color: #ff9900;
   border: none;
   margin-left: 15px;
   color: #fff;
+  font-size: 1.6rem;
 }
 
 @media (min-width: 200px) and (max-width: 1000px) {
-  
-  .buttons{
+  .buttons {
     display: none;
-}
+  }
 }
 /*--------------------------- header-end ---------------------------*/
 /*------------------------ burger ----------------------------*/
@@ -174,7 +182,7 @@ body {
 
 .burger-icon span {
   display: block;
-  background-color: #030303;
+  background-color: #FF9900;
   height: 3px;
   width: 25px;
   margin: 5px 0;
@@ -203,7 +211,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background-color: #020202;
+  background-color: #FF9900;
   padding-top: 60px;
   transition: 0.5s;
   z-index: 100;
@@ -296,10 +304,14 @@ body {
 /*------------------------- burger-end ------------------------------*/
 
 /*-------------------- hero ---------------------------*/
-/* .hero {
+.hero {
   background-color: #fff;
   color: #000;
-  padding: 100px 0 190px;
+  padding: 70px 0 190px;
+}
+
+.hero .container {
+  display: flex;
 }
 
 .hero .container .contant {
@@ -309,68 +321,168 @@ body {
   flex-wrap: wrap;
 }
 
-.hero h1 {
-  max-width: 871px;
-  color: #000;
-  position: relative;
-  z-index: 1;
-  font-size: 35px;
-  font-weight: 100;
-  margin-bottom: 50px;
-}
 .hero p {
-  max-width: 600px;
-  font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-.icons{
+.icons {
   display: flex;
 }
-.icons img{
+.icons img {
   width: 30px;
   height: 30px;
 }
 
-h2{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-weight: 700;
+.hero .buttons a {
+  margin-left: 0;
 }
 
-.hero a{
-  color: blue;
-  border-bottom: 1px solid blue;
-}
-
-.hero .example{
+.hero .example {
   width: 560px;
+}
+
+/* .hero .photo {
+  position: relative;
+  overflow: hidden;
+  height: 0px;
+  padding-bottom: 40%;
+}
+.hero .photo .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: url("./img/hero/hero.png") center / 100% 100% no-repeat;
+  background-size: cover;
+  width: 644px;
+  height: 495px;
 } */
+
+.photo {
+  position: relative;
+  overflow: hidden;
+  height: 0px;
+  padding-bottom: 40%;
+  width: 50%;
+}
+.img_photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  background: url("./img/hero/hero.png") center / 100% 100% no-repeat;
+  background-size: cover;
+}
 
 /*------------------- tools ----------------------------*/
 
-.tools{
-  
+.tools {
   text-align: center;
   padding: 111px 0 90px;
 }
 
-.tools .container{
+.tools .container {
   display: flex;
   flex-direction: column;
 }
 
-.tools-list{
+.tools-list {
   display: flex;
   justify-content: space-around;
   margin-top: 54px;
 }
 
-.tools-list__item svg{
+.footer-list__item:hover a{
+  color: #18B5DC;
+}
+
+
+
+.tools-list__item svg {
   height: 51px;
   width: 50px;
 }
 
-.tools .buttons{
- margin-top: 34px;
+.tools .buttons {
+  margin-top: 34px;
+}
+
+/*--------------------------------- footer ----------------------------*/
+.footer{
+  padding: 70px 0;
+}
+
+.footer .container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (min-width: 200px) and (max-width: 850px) {
+  .footer .container{
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .logo, .footer-list, .footer-serch{
+    margin-bottom: 50px;
+  }
+}
+
+.footer .logo {
+  display: flex;
+}
+.footer .logo img {
+  height: 32px;
+  width: 32px;
+  margin-right: 12px;
+}
+
+.footer-list .footer-list__item{
+  margin-bottom: 15px;
+}
+
+.footer-list .footer-list__item:nth-child(1){
+  margin-bottom: 30px;
+}
+
+p.bold{
+  margin-bottom: 25px;
+}
+
+.bold{
+  font-weight: 700;
+}
+
+.footer-serch{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  max-width: 340px;
+  width: 100%;
+}
+
+.placeholder{
+  padding: 15px 10px;
+  font-size: 1.6rem;
+
+  border: 1px solid #BCD0E5;
+  border-radius: 4px;
+}
+
+::placeholder {
+  color: #BCD0E5;
+}
+
+.button{
+  background-color: #FF9900;
+  border-radius: 4px;
+  margin-top: 25px;
+  padding: 13px 40px;
+  align-self: flex-start;
 }
