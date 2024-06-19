@@ -384,6 +384,8 @@ body {
 .tools {
   text-align: center;
   padding: 111px 0 90px;
+  background: url("./img/tool/bg.png") center / 100% 100% no-repeat;
+  background-size: cover;
 }
 
 .tools .container {
@@ -395,6 +397,7 @@ body {
   display: flex;
   justify-content: space-around;
   margin-top: 54px;
+  flex-wrap: wrap;
 }
 
 .footer-list__item:hover a{
@@ -409,7 +412,27 @@ body {
 }
 
 .tools .buttons {
-  margin-top: 34px;
+  margin-top: 70px;
+  font-weight: 700;
+}
+
+
+
+.tools-list__item{
+  text-align-last: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tools-list__item svg{
+  margin-bottom: 30px;
+}
+
+@media (min-width: 200px) and (max-width: 1000px) {
+  .tools-list__item {
+    margin-bottom: 20px;
+  }
 }
 
 /*--------------------------------- footer ----------------------------*/
@@ -482,7 +505,11 @@ p.bold{
 .button{
   background-color: #FF9900;
   border-radius: 4px;
-  margin-top: 25px;
   padding: 13px 40px;
   align-self: flex-start;
+}
+
+.footer .button{
+  margin-top: 25px;
+
 }
